@@ -1,0 +1,24 @@
+<PreferenceScreen xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <!-- LƯU Ý: Ẩn các nút để đơn giản hóa giao diện người dùng.
+    Người dùng có thể chạm vào bên ngoài hộp thoại để
+            gạt bỏ nó. -->
+    <!-- LƯU Ý: Tóm tắt của ListPreference phải được đặt thành
+    giá trị của nó theo mã hoạt động. -->
+    <ListPreference
+        android:defaultValue="180"
+        android:entries="@array/pref_sync_frequency_titles"
+        android:entryValues="@array/pref_sync_frequency_values"
+        android:key="sync_frequency"
+        android:negativeButtonText="@null"
+        android:positiveButtonText="@null"
+        android:title="@string/pref_title_sync_frequency" />
+
+    <!-- Tùy chọn này chỉ khởi chạy một ý định khi được chọn.
+     Sử dụng giao diện người dùng này một cách tiết kiệm,
+     mỗi hướng dẫn thiết kế. -->
+    <Preference android:title="@string/pref_title_system_sync_settings">
+        <intent android:action="android.settings.SYNC_SETTINGS" />
+    </Preference>
+
+</PreferenceScreen>
